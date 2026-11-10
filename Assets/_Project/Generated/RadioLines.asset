@@ -1,0 +1,213 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b4a12cefe08cd4d95737ee511001ea, type: 3}
+  m_Name: RadioLines
+  m_EditorClassIdentifier: Assembly-CSharp::EyeSky.Radio.RadioLineBook
+  entries:
+  - key: ack_go
+    variants:
+    - "Voy para all\xE1."
+    - Copiado, Ojo. En marcha.
+    - Vale, me muevo.
+  - key: ack_append
+    variants:
+    - "Luego ah\xED, copiado."
+    - Anotado.
+  - key: ack_stop
+    variants:
+    - Quieto.
+    - Me paro.
+    - Alto, copiado.
+  - key: ack_hide
+    variants:
+    - Me escondo.
+    - "Buscando d\xF3nde meterme."
+  - key: ack_knockout
+    variants:
+    - "D\xE9jamelo a m\xED."
+    - Va a dormir un rato.
+  - key: ack_kill
+    variants:
+    - "\xBFSeguro? Vale."
+    - Copiado. Sin testigos.
+  - key: ack_retreat
+    variants:
+    - Nos vamos. A la camioneta.
+    - Retirada, copiado.
+  - key: arrived
+    variants:
+    - En {0}, Ojo.
+    - Ya estoy en {0}.
+  - key: idle_ask
+    variants:
+    - "Ojo, \xBFpor d\xF3nde?"
+    - "Sigo aqu\xED. \xBFQu\xE9 hago?"
+    - "Ojo, \xBFme copias? Necesito ruta."
+  - key: door_system
+    variants:
+    - "Esta puerta va por sistema, Ojo. \xC1bremela."
+    - Cerrada, y es cosa tuya. Dale.
+  - key: door_cannot
+    variants:
+    - "Est\xE1 cerrada y no s\xE9 abrir esto."
+    - "Aqu\xED hace falta Liebre."
+  - key: picking
+    variants:
+    - Dame unos segundos con esta cerradura.
+    - Forzando. No me metas prisa.
+  - key: picked
+    variants:
+    - Abierta.
+    - Listo, pasamos.
+  - key: hear_steps
+    variants:
+    - Oigo pasos cerca, Ojo.
+    - "Viene alguien. \xBFQu\xE9 hago?"
+  - key: spotted
+    variants:
+    - "\xA1Me han visto!"
+    - "\xA1Mierda, me ha visto!"
+  - key: captured
+    variants:
+    - Me han cogido, Ojo...
+    - Estoy fuera. Lo siento.
+  - key: takedown_done
+    variants:
+    - Dormido.
+    - Uno menos.
+  - key: shot_done
+    variants:
+    - "Hecho. Eso se ha o\xEDdo."
+    - "Ya est\xE1. V\xE1monos pronto."
+  - key: escaped
+    variants:
+    - En la camioneta.
+    - Dentro. Arranca cuando quieras.
+  - key: check_call
+    variants:
+    - Control de las tres. Reportad.
+    - Base a todos, control.
+  - key: check_ok
+    variants:
+    - Todo tranquilo.
+    - Sin novedad.
+  - key: check_miss
+    variants:
+    - "{0}, responde. {0}, \xBFme copias?"
+  - key: check_base_silent
+    variants:
+    - "Base, \xBFest\xE1s ah\xED? Base no contesta."
+  - key: strange
+    variants:
+    - "He o\xEDdo algo. Voy a mirar."
+    - "Hay ruido por aqu\xED, compruebo."
+  - key: alarm_cam
+    variants:
+    - "\xA1Tengo a alguien en {0}! Aviso."
+  - key: alarm_saw
+    variants:
+    - "\xA1Intruso en {0}! \xA1Doy aviso!"
+    - "\xA1Alto! \xA1Hay alguien en {0}!"
+  - key: body
+    variants:
+    - "\xA1Hay un compa\xF1ero en el suelo en {0}!"
+  - key: lights_go
+    variants:
+    - "Se ha ido la luz. Voy al cuadro el\xE9ctrico."
+    - Voy a mirar el cuadro.
+  - key: lights_done
+    variants:
+    - Luz restaurada.
+    - "Ya est\xE1, era el diferencial."
+  - key: woke
+    variants:
+    - Me han golpeado. Hay gente dentro.
+  - key: objective_intro
+    variants:
+    - "Ojo, estamos en la calle. La persiana y la c\xE1mara del muelle son tuyas.
+      Vamos a por la tarjeta del director."
+  - key: objective_card_taken
+    variants:
+    - "Tengo la tarjeta. Ahora a la c\xE1mara acorazada, Ojo."
+  - key: objective_loot_taken
+    variants:
+    - "Lo tengo. V\xE1monos a la camioneta."
+  - key: objective_need_person
+    variants:
+    - Ojo, necesitamos a alguien junto a esa puerta primero.
+  - key: objective_need_card
+    variants:
+    - Sin la tarjeta del director no abrimos esto.
+  - key: objective_vault_open
+    variants:
+    - "Abierta. Madre m\xEDa."
+  - key: police_chatter
+    variants:
+    - Unidad doce, aparcamiento mal puesto en la calle Mayor. Sin urgencia.
+    - Central a unidades, se busca moto robada, color rojo, zona norte.
+    - Unidad tres, disputa vecinal resuelta. Volvemos a ruta.
+    - Unidad nueve, control de alcoholemia en la rotonda. Sin novedades.
+    - Central, aviso por ruido en un bar del centro. Unidad cinco, atienda.
+    - Unidad ocho, perro suelto en el parque. Lo tenemos.
+    - "Central a unidad dos, confirme su posici\xF3n. Copiado, gracias."
+    - Unidad seis, cambio de turno a las cuatro. Recibido.
+  - key: police_round_notice
+    variants:
+    - Unidad siete, recuerde la ronda por la calle Ferrer a las dos y media.
+  - key: police_rumor
+    variants:
+    - Central a unidades. Llamada rara desde la zona de Ferrer. Sin confirmar.
+    - Un vecino dice haber visto algo en Ferrer. De momento, nada.
+  - key: police_verify
+    variants:
+    - Unidad siete, cuando quede libre, compruebe la casa de subastas de la calle
+      Ferrer.
+  - key: police_verify_ack
+    variants:
+    - Unidad siete, copiado. Saliendo sin prisa.
+  - key: police_enroute
+    variants:
+    - Central a todas las unidades. Robo en curso, casa de subastas, calle Ferrer.
+      Prioridad.
+  - key: police_enroute_ack
+    variants:
+    - "Unidad catorce, voy para all\xE1."
+  - key: police_silent
+    variants:
+    - "Aproximaci\xF3n sin sirenas. Repito, sin sirenas."
+  - key: police_route_0
+    variants:
+    - Pasando la avenida del Puerto.
+  - key: police_route_1
+    variants:
+    - Cruzando el puente Mayor.
+  - key: police_route_2
+    variants:
+    - A la altura de la plaza del Reloj.
+  - key: police_route_3
+    variants:
+    - Entrando en la calle Ferrer.
+  - key: police_arrived
+    variants:
+    - Estamos en la puerta. Entramos.
+  - key: police_interference_ok
+    variants:
+    - Central a unidades. Falsa alarma en Ferrer, cancelen. Repito, cancelen.
+  - key: police_interference_bad
+    variants:
+    - "\xBFQui\xE9n ha emitido eso? Ignoren. Mantengan el rumbo."
+  - key: police_gunshot
+    variants:
+    - Una vecina reporta detonaciones cerca de la calle Ferrer.
+  - key: police_outage
+    variants:
+    - "La compa\xF1\xEDa el\xE9ctrica avisa de un corte parcial en Ferrer."

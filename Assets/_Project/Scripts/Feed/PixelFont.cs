@@ -1,0 +1,104 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace EyeSky.Feed
+{
+    /// <summary>Letra de 5x7 para los rotulos de la camara: se dibuja a la resolucion de la imagen.</summary>
+    public static class PixelFont
+    {
+        const int GlyphWidth = 5;
+        const int GlyphHeight = 7;
+
+        static readonly Dictionary<char, byte[]> Glyphs = new()
+        {
+            ['0'] = new byte[] { 0x0E, 0x11, 0x13, 0x15, 0x19, 0x11, 0x0E },
+            ['1'] = new byte[] { 0x04, 0x0C, 0x04, 0x04, 0x04, 0x04, 0x0E },
+            ['2'] = new byte[] { 0x0E, 0x11, 0x01, 0x02, 0x04, 0x08, 0x1F },
+            ['3'] = new byte[] { 0x1F, 0x02, 0x04, 0x02, 0x01, 0x11, 0x0E },
+            ['4'] = new byte[] { 0x02, 0x06, 0x0A, 0x12, 0x1F, 0x02, 0x02 },
+            ['5'] = new byte[] { 0x1F, 0x10, 0x1E, 0x01, 0x01, 0x11, 0x0E },
+            ['6'] = new byte[] { 0x06, 0x08, 0x10, 0x1E, 0x11, 0x11, 0x0E },
+            ['7'] = new byte[] { 0x1F, 0x01, 0x02, 0x04, 0x08, 0x08, 0x08 },
+            ['8'] = new byte[] { 0x0E, 0x11, 0x11, 0x0E, 0x11, 0x11, 0x0E },
+            ['9'] = new byte[] { 0x0E, 0x11, 0x11, 0x0F, 0x01, 0x02, 0x0C },
+            ['A'] = new byte[] { 0x0E, 0x11, 0x11, 0x1F, 0x11, 0x11, 0x11 },
+            ['B'] = new byte[] { 0x1E, 0x11, 0x11, 0x1E, 0x11, 0x11, 0x1E },
+            ['C'] = new byte[] { 0x0E, 0x11, 0x10, 0x10, 0x10, 0x11, 0x0E },
+            ['D'] = new byte[] { 0x1C, 0x12, 0x11, 0x11, 0x11, 0x12, 0x1C },
+            ['E'] = new byte[] { 0x1F, 0x10, 0x10, 0x1E, 0x10, 0x10, 0x1F },
+            ['F'] = new byte[] { 0x1F, 0x10, 0x10, 0x1E, 0x10, 0x10, 0x10 },
+            ['G'] = new byte[] { 0x0E, 0x11, 0x10, 0x17, 0x11, 0x11, 0x0F },
+            ['H'] = new byte[] { 0x11, 0x11, 0x11, 0x1F, 0x11, 0x11, 0x11 },
+            ['I'] = new byte[] { 0x0E, 0x04, 0x04, 0x04, 0x04, 0x04, 0x0E },
+            ['J'] = new byte[] { 0x07, 0x02, 0x02, 0x02, 0x02, 0x12, 0x0C },
+            ['K'] = new byte[] { 0x11, 0x12, 0x14, 0x18, 0x14, 0x12, 0x11 },
+            ['L'] = new byte[] { 0x10, 0x10, 0x10, 0x10, 0x10, 0x10, 0x1F },
+            ['M'] = new byte[] { 0x11, 0x1B, 0x15, 0x15, 0x11, 0x11, 0x11 },
+            ['N'] = new byte[] { 0x11, 0x11, 0x19, 0x15, 0x13, 0x11, 0x11 },
+            ['O'] = new byte[] { 0x0E, 0x11, 0x11, 0x11, 0x11, 0x11, 0x0E },
+            ['P'] = new byte[] { 0x1E, 0x11, 0x11, 0x1E, 0x10, 0x10, 0x10 },
+            ['Q'] = new byte[] { 0x0E, 0x11, 0x11, 0x11, 0x15, 0x12, 0x0D },
+            ['R'] = new byte[] { 0x1E, 0x11, 0x11, 0x1E, 0x14, 0x12, 0x11 },
+            ['S'] = new byte[] { 0x0F, 0x10, 0x10, 0x0E, 0x01, 0x01, 0x1E },
+            ['T'] = new byte[] { 0x1F, 0x04, 0x04, 0x04, 0x04, 0x04, 0x04 },
+            ['U'] = new byte[] { 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x0E },
+            ['V'] = new byte[] { 0x11, 0x11, 0x11, 0x11, 0x11, 0x0A, 0x04 },
+            ['W'] = new byte[] { 0x11, 0x11, 0x11, 0x15, 0x15, 0x15, 0x0A },
+            ['X'] = new byte[] { 0x11, 0x11, 0x0A, 0x04, 0x0A, 0x11, 0x11 },
+            ['Y'] = new byte[] { 0x11, 0x11, 0x11, 0x0A, 0x04, 0x04, 0x04 },
+            ['Z'] = new byte[] { 0x1F, 0x01, 0x02, 0x04, 0x08, 0x10, 0x1F },
+            [':'] = new byte[] { 0x00, 0x0C, 0x0C, 0x00, 0x0C, 0x0C, 0x00 },
+            ['.'] = new byte[] { 0x00, 0x00, 0x00, 0x00, 0x00, 0x0C, 0x0C },
+            ['-'] = new byte[] { 0x00, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x00 },
+            ['/'] = new byte[] { 0x00, 0x01, 0x02, 0x04, 0x08, 0x10, 0x00 },
+            ['*'] = new byte[] { 0x00, 0x0E, 0x1F, 0x1F, 0x1F, 0x0E, 0x00 },
+        };
+
+        public static int Measure(string text, int scale)
+        {
+            return text.Length * (GlyphWidth + 1) * scale;
+        }
+
+        /// <summary>Dibuja con una sombra de un pixel. (x, y) es la esquina superior izquierda.</summary>
+        public static void Draw(Color32[] pixels, int width, int height, string text, int x, int y, int scale, Color32 color)
+        {
+            DrawLayer(pixels, width, height, text, x + scale, y + scale, scale, new Color32(0, 0, 0, 200));
+            DrawLayer(pixels, width, height, text, x, y, scale, color);
+        }
+
+        /// <summary>Sin sombra: para los paneles de la consola.</summary>
+        public static void DrawPlain(Color32[] pixels, int width, int height, string text, int x, int y, Color32 color, int scale = 1)
+        {
+            DrawLayer(pixels, width, height, text, x, y, scale, color);
+        }
+
+        static void DrawLayer(Color32[] pixels, int width, int height, string text, int x, int y, int scale, Color32 color)
+        {
+            var cursor = x;
+            foreach (var character in text)
+            {
+                if (Glyphs.TryGetValue(char.ToUpperInvariant(character), out var rows))
+                    DrawGlyph(pixels, width, height, rows, cursor, y, scale, color);
+                cursor += (GlyphWidth + 1) * scale;
+            }
+        }
+
+        static void DrawGlyph(Color32[] pixels, int width, int height, byte[] rows, int x, int y, int scale, Color32 color)
+        {
+            for (var row = 0; row < GlyphHeight; row++)
+            for (var column = 0; column < GlyphWidth; column++)
+            {
+                if ((rows[row] & (1 << (GlyphWidth - 1 - column))) == 0)
+                    continue;
+                for (var sy = 0; sy < scale; sy++)
+                for (var sx = 0; sx < scale; sx++)
+                {
+                    var px = x + column * scale + sx;
+                    var py = height - 1 - (y + row * scale + sy);
+                    if (px >= 0 && px < width && py >= 0 && py < height)
+                        pixels[py * width + px] = color;
+                }
+            }
+        }
+    }
+}

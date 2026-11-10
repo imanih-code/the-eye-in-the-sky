@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b842fac8e65454f9c8a5bd3b31dcfc, type: 3}
+  m_Name: NpcSettings
+  m_EditorClassIdentifier: Assembly-CSharp::EyeSky.Npc.NpcSettings
+  liebreSpeed: 1.75
+  yunqueSpeed: 1.6
+  orderDelayMin: 0.5
+  orderDelayMax: 1.5
+  pickSeconds: 6
+  knockoutSeconds: 2.5
+  knockoutReach: 1.1
+  behindAngle: 100
+  shootRange: 7
+  idleAskSeconds: 14
+  doorNagSeconds: 15
+  hearFootstepsRadius: 4.5
+  autoHideSeconds: 4
+  engageDistance: 4
+  liebreNoiseRadius: 1.5
+  yunqueNoiseRadius: 3.5
+  pickNoiseRadius: 3
+  patrolSpeed: 1.4
+  chaseSpeed: 3
+  patrolPauseMin: 1.5
+  patrolPauseMax: 4
+  sightRange: 9
+  sightHalfAngle: 55
+  darkRangeFactor: 0.4
+  flashlightHalfAngle: 22
+  spotSeconds: 0.7
+  hiddenFindDistance: 1.2
+  hearSeconds: 1.5
+  reportSeconds: 3
+  captureDistance: 1.2
+  captureSeconds: 1.5
+  lookAroundSeconds: 4
+  gunshotRadius: 14
+  wakeSeconds: 240
+  checkIntervalSeconds: 180
+  cameraDetectSeconds: 2
+  restoreDelayMin: 10
+  restoreDelayMax: 25
+  restoreWorkSeconds: 5

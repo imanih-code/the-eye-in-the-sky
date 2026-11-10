@@ -1,0 +1,348 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cca7bec9131863640adf7cff9818897d, type: 3}
+  m_Name: Building_Layout
+  m_EditorClassIdentifier: Assembly-CSharp::EyeSky.Security.BuildingLayout
+  rooms:
+  - id: calle
+    label: CALLE
+    spoken: la calle
+    area:
+      serializedVersion: 2
+      x: -20
+      y: 12
+      width: 11.8
+      height: 10
+    lightsHackable: 0
+    hidingSpots:
+    - {x: -11.6, y: 0, z: 15}
+  - id: muelle
+    label: MUELLE
+    spoken: el muelle
+    area:
+      serializedVersion: 2
+      x: -8
+      y: 13
+      width: 7.8
+      height: 8
+    lightsHackable: 1
+    hidingSpots:
+    - {x: -5.5, y: 0, z: 18.9}
+    - {x: -2.2, y: 0, z: 15.3}
+  - id: pasillo
+    label: PASILLO SERVICIO
+    spoken: el pasillo de servicio
+    area:
+      serializedVersion: 2
+      x: 0
+      y: 16.4
+      width: 16
+      height: 3
+    lightsHackable: 1
+    hidingSpots:
+    - {x: 9.2, y: 0, z: 18.9}
+    - {x: 12, y: 0, z: 18.7}
+  - id: electrico
+    label: CUARTO ELECTRICO
+    spoken: "el cuarto el\xE9ctrico"
+    area:
+      serializedVersion: 2
+      x: 16.2
+      y: 16.4
+      width: 4.799999
+      height: 4.6000004
+    lightsHackable: 1
+    hidingSpots:
+    - {x: 18.6, y: 0, z: 17.6}
+  - id: seguridad
+    label: SEGURIDAD
+    spoken: seguridad
+    area:
+      serializedVersion: 2
+      x: 0
+      y: 9.2
+      width: 5
+      height: 7.000001
+    lightsHackable: 1
+    hidingSpots:
+    - {x: 0.9, y: 0, z: 13.2}
+  - id: vestibulo
+    label: VESTIBULO
+    spoken: "el vest\xEDbulo"
+    area:
+      serializedVersion: 2
+      x: 5.2
+      y: 9.2
+      width: 6.8
+      height: 7.000001
+    lightsHackable: 1
+    hidingSpots:
+    - {x: 7, y: 0, z: 15.3}
+    - {x: 10.7, y: 0, z: 11}
+  - id: galeria_oeste
+    label: GALERIA OESTE
+    spoken: "la galer\xEDa oeste"
+    area:
+      serializedVersion: 2
+      x: 12.2
+      y: 9.2
+      width: 6.8
+      height: 7.000001
+    lightsHackable: 1
+    hidingSpots:
+    - {x: 15.6, y: 0, z: 11.6}
+    - {x: 17, y: 0, z: 11}
+  - id: oficina
+    label: OFICINA DIRECTOR
+    spoken: la oficina del director
+    area:
+      serializedVersion: 2
+      x: 19.2
+      y: 9.2
+      width: 6.799999
+      height: 7.000001
+    lightsHackable: 1
+    hidingSpots:
+    - {x: 24.6, y: 0, z: 14.2}
+    - {x: 20.5, y: 0, z: 15.2}
+  - id: galeria_este
+    label: GALERIA ESTE
+    spoken: "la galer\xEDa este"
+    area:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 12
+      height: 9
+    lightsHackable: 1
+    hidingSpots:
+    - {x: 2.5, y: 0, z: 2.6}
+    - {x: 9.6, y: 0, z: 2.6}
+    - {x: 0.8, y: 0, z: 7.6}
+  - id: antesala
+    label: ANTESALA
+    spoken: la antesala
+    area:
+      serializedVersion: 2
+      x: 12.2
+      y: 3
+      width: 11.8
+      height: 6
+    lightsHackable: 1
+    hidingSpots:
+    - {x: 14.6, y: 0, z: 7.7}
+    - {x: 23.7, y: 0, z: 7.9}
+  - id: camara
+    label: CAMARA ACORAZADA
+    spoken: "la c\xE1mara acorazada"
+    area:
+      serializedVersion: 2
+      x: 24.2
+      y: 3
+      width: 5.799999
+      height: 6
+    lightsHackable: 1
+    hidingSpots:
+    - {x: 27.1, y: 0, z: 7.1}
+  doors:
+  - id: calle_muelle
+    position: {x: -8.1, y: 0, z: 17}
+    alongX: 0
+    roomA: calle
+    roomB: muelle
+    kind: 3
+    startsOpen: 0
+  - id: muelle_pasillo
+    position: {x: -0.1, y: 0, z: 18}
+    alongX: 0
+    roomA: muelle
+    roomB: pasillo
+    kind: 0
+    startsOpen: 0
+  - id: pasillo_seguridad
+    position: {x: 2.5, y: 0, z: 16.3}
+    alongX: 1
+    roomA: seguridad
+    roomB: pasillo
+    kind: 0
+    startsOpen: 0
+  - id: pasillo_vestibulo
+    position: {x: 8.5, y: 0, z: 16.3}
+    alongX: 1
+    roomA: vestibulo
+    roomB: pasillo
+    kind: 1
+    startsOpen: 0
+  - id: pasillo_electrico
+    position: {x: 16.1, y: 0, z: 18}
+    alongX: 0
+    roomA: pasillo
+    roomB: electrico
+    kind: 0
+    startsOpen: 0
+  - id: vestibulo_oeste
+    position: {x: 12.1, y: 0, z: 12.7}
+    alongX: 0
+    roomA: vestibulo
+    roomB: galeria_oeste
+    kind: 0
+    startsOpen: 1
+  - id: vestibulo_este
+    position: {x: 8.5, y: 0, z: 9.1}
+    alongX: 1
+    roomA: galeria_este
+    roomB: vestibulo
+    kind: 0
+    startsOpen: 1
+  - id: oeste_oficina
+    position: {x: 19.1, y: 0, z: 12.7}
+    alongX: 0
+    roomA: galeria_oeste
+    roomB: oficina
+    kind: 2
+    startsOpen: 0
+  - id: oficina_antesala
+    position: {x: 22, y: 0, z: 9.1}
+    alongX: 1
+    roomA: antesala
+    roomB: oficina
+    kind: 0
+    startsOpen: 0
+  - id: este_antesala
+    position: {x: 12.1, y: 0, z: 6}
+    alongX: 0
+    roomA: galeria_este
+    roomB: antesala
+    kind: 1
+    startsOpen: 0
+  - id: antesala_camara
+    position: {x: 24.1, y: 0, z: 6}
+    alongX: 0
+    roomA: antesala
+    roomB: camara
+    kind: 4
+    startsOpen: 0
+  cameras:
+  - label: CALLE
+    roomId: calle
+    view:
+      serializedVersion: 2
+      x: -20.25
+      y: 11.75
+      width: 12.3
+      height: 10.5
+    focus: {x: -14.1, y: 0.9, z: 17}
+    profile: 0
+    infrared: 0
+    watchedByOperator: 0
+  - label: MUELLE
+    roomId: muelle
+    view:
+      serializedVersion: 2
+      x: -8.25
+      y: 12.75
+      width: 8.3
+      height: 8.5
+    focus: {x: -4.1, y: 0.9, z: 17}
+    profile: 0
+    infrared: 0
+    watchedByOperator: 1
+  - label: PASILLO SERVICIO
+    roomId: pasillo
+    view:
+      serializedVersion: 2
+      x: 5
+      y: 16.15
+      width: 8
+      height: 3.5
+    focus: {x: 9, y: 0.9, z: 17.9}
+    profile: 1
+    infrared: 0
+    watchedByOperator: 1
+  - label: SEGURIDAD
+    roomId: seguridad
+    view:
+      serializedVersion: 2
+      x: -0.25
+      y: 8.95
+      width: 5.5
+      height: 7.500001
+    focus: {x: 2.5, y: 0.9, z: 12.700001}
+    profile: 0
+    infrared: 0
+    watchedByOperator: 1
+  - label: GALERIA ESTE
+    roomId: galeria_este
+    view:
+      serializedVersion: 2
+      x: -0.25
+      y: -0.25
+      width: 12.5
+      height: 9.5
+    focus: {x: 6, y: 0.9, z: 4.5}
+    profile: 0
+    infrared: 1
+    watchedByOperator: 1
+  - label: VESTIBULO
+    roomId: vestibulo
+    view:
+      serializedVersion: 2
+      x: 4.95
+      y: 8.95
+      width: 7.3
+      height: 7.500001
+    focus: {x: 8.6, y: 0.9, z: 12.700001}
+    profile: 0
+    infrared: 0
+    watchedByOperator: 1
+  - label: GALERIA OESTE
+    roomId: galeria_oeste
+    view:
+      serializedVersion: 2
+      x: 11.95
+      y: 8.95
+      width: 7.3
+      height: 7.500001
+    focus: {x: 15.6, y: 0.9, z: 12.700001}
+    profile: 0
+    infrared: 0
+    watchedByOperator: 1
+  - label: ANTESALA
+    roomId: antesala
+    view:
+      serializedVersion: 2
+      x: 11.95
+      y: 2.75
+      width: 12.3
+      height: 6.5
+    focus: {x: 18.1, y: 0.9, z: 6}
+    profile: 0
+    infrared: 1
+    watchedByOperator: 1
+  - label: CAMARA ACORAZADA
+    roomId: camara
+    view:
+      serializedVersion: 2
+      x: 23.95
+      y: 2.75
+      width: 6.299999
+      height: 6.5
+    focus: {x: 27.1, y: 0.9, z: 6}
+    profile: 1
+    infrared: 0
+    watchedByOperator: 1
+  mapBounds:
+    serializedVersion: 2
+    x: -8
+    y: 0
+    width: 38
+    height: 21
