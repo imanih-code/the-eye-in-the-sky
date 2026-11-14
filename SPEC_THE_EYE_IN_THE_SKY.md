@@ -398,3 +398,13 @@ Propuestas aceptadas en general el 2026-11-09. Falta el visto bueno para empezar
 | **D4** | Transcripción de radio | Sí, mientras suena y desactivable |
 | **D5** | Escenario y banda | Casa de subastas, dos ladrones |
 | **D6** | Idioma | Español |
+
+## 16. Demo web (noviembre de 2026)
+
+Al probar el MVP de Unity, los hackeos resultaron demasiado difíciles y dirigir a la banda exigía demasiado control. La demo de `Web/` prueba otra forma de jugar:
+
+- **Banda autónoma:** se mueve, espera y neutraliza guardias por su cuenta.
+- **Jugador de apoyo:** atiende peticiones, cada una con su botón.
+- **Hackeos cortos:** el mundo va a cámara lenta mientras duran.
+
+Cómo abrirla y qué cambia en detalle: `Web/README.md`.

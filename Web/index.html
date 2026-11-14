@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Eye in the Sky</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="top">
+    <div class="brand">THE EYE IN THE SKY <span>// consola de la furgoneta</span></div>
+    <div id="clock">02:15:00</div>
+    <button id="btnVoice" class="tbtn" title="Voces sintetizadas del navegador">VOZ: SÍ</button>
+    <button id="btnHelp" class="tbtn">AYUDA</button>
+  </header>
+
+  <main id="main">
+    <section id="feedCol">
+      <div id="feedBox">
+        <canvas id="feed"></canvas>
+        <div class="hud tl" id="hudCam"></div>
+        <div class="hud tr"><span class="rec">●</span> REC <span id="hudTime"></span></div>
+        <div class="hud bl" id="hudStatus"></div>
+        <div class="hud br" id="hudLoop"></div>
+        <div id="toast"></div>
+        <div id="hack" hidden>
+          <div class="hhead"><span id="hackTitle"></span><span id="hackName"></span></div>
+          <div class="hhelp" id="hackHelp"></div>
+          <canvas id="hackCanvas"></canvas>
+          <div class="hfoot">
+            <span>INTENTOS</span><span class="tries" id="hackTries"></span>
+            <span class="tbar"><i id="hackTime"></i></span>
+            <button id="hackCancel" class="tbtn">ESC · DEJARLO</button>
+          </div>
+        </div>
+      </div>
+      <div id="camStrip"></div>
+    </section>
+
+    <aside id="side">
+      <div class="panel" id="reqPanel">
+        <div class="ptitle">PETICIONES DE LA BANDA</div>
+        <div id="reqs"></div>
+      </div>
+      <div class="panel" id="roomPanel"></div>
+      <div class="panel" id="mapPanel">
+        <div class="ptitle">PLANO · INDUSTRIAL 14 <span class="legend"><b class="lc">●</b> banda <b class="lg">●</b> guardia</span></div>
+        <canvas id="map"></canvas>
+      </div>
+    </aside>
+  </main>
+
+  <footer id="radio">
+    <div class="ptitle">RADIO · <span class="t-crew">BANDA</span> / <span class="t-sec">SEGURIDAD</span> / <span class="t-pol">ESCÁNER POLICIAL</span></div>
+    <div id="log"></div>
+  </footer>
+</div>
+
+<div id="overlay"><div class="card" id="card"></div></div>
+
+<script src="js/data.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/sim.js"></script>
+<script src="js/render.js"></script>
+<script src="js/puzzles.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>

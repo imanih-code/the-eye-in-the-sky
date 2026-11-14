@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "web-demo",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["Web/serve.js", "8642"],
+      "port": 8642
+    }
+  ]
+}
